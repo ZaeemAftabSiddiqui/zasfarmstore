@@ -10,6 +10,8 @@ export default function Home() {
           content="ZASFarmStore- Farm fresh organic food "
         />
       </Head>
+      this is me
+      <div className="mx-6  ">ZASFarmStore</div>
     </div>
   );
 }
