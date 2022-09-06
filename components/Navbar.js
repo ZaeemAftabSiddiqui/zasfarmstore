@@ -4,7 +4,7 @@ import Link from "next/link";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 const navbar = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center md:justify-start items-center ">
+    <div className="flex flex-col  md:flex-row justify-center md:justify-start items-center mb-1 shadow-xl">
       <div className="logo mx-5">
         <Image
           src="/logo.png"
