@@ -1,7 +1,7 @@
 import React from "react";
 
 const Vegetable = () => {
-  return <div></div>;
+  return <div>vegetable</div>;
 };
 
 export default Vegetable;
