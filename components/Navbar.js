@@ -9,8 +9,8 @@ import {
 } from "react-icons/ai";
 import { BsFillBagCheckFill } from "react-icons/bs";
 
-const navbar = ({ subTotal, cart, addToCart, removeFromCart, clearCart }) => {
-  // console.log(subTotal, cart, addToCart, removeFromCart, clearCart);
+const navbar = ({ cart, addToCart, removeFromCart, clearCart }) => {
+  // console.log( cart, addToCart, removeFromCart, clearCart);
   const toggelCart = () => {
     if (ref.current.classList.contains("translate-x-full")) {
       ref.current.classList.remove("translate-x-full");
@@ -22,7 +22,7 @@ const navbar = ({ subTotal, cart, addToCart, removeFromCart, clearCart }) => {
   };
   const ref = useRef();
   return (
-    <div className="flex flex-col  md:flex-row justify-center md:justify-start items-center shadow-md">
+    <div className="flex flex-col  md:flex-row justify-center md:justify-start items-center shadow-md sticky top-0 bg-white z-10 ">
       <div className="logo mx-5">
         <Link href={"/"}>
           <a>
@@ -78,7 +78,7 @@ const navbar = ({ subTotal, cart, addToCart, removeFromCart, clearCart }) => {
       </div>
       <div
         ref={ref}
-        className="h-full w-72 sideCart absolute top-0 right-0 bg-green-100 px-8 py-10 transform transition-transform translate-x-full"
+        className="h-[100vh] w-72 sideCart absolute top-0 right-0 bg-green-100 px-8 py-10 transform transition-transform translate-x-full"
       >
         <h2 className="font-bold text-xl text-center">Shopping Cart</h2>
         <span
