@@ -29,8 +29,8 @@ const navbar = ({ cart, addToCart, removeFromCart, clearCart }) => {
             <Image
               src="/logo.png"
               alt="ZASFarmStore Farm fresh organic"
-              width={100}
-              height={100}
+              width={70}
+              height={70}
             />
           </a>
         </Link>
@@ -131,10 +131,12 @@ const navbar = ({ cart, addToCart, removeFromCart, clearCart }) => {
           })}
         </ol>
         <div className="flex">
-          <button className="flex mr-2 text-white bg-green-500 border-0 py-2 px-2 focus:outline-none hover:bg-green-600 rounded text-sm">
-            <BsFillBagCheckFill className="m-1" />
-            Checkout
-          </button>
+          <Link href={"/checkout"}>
+            <button className="flex mr-2 text-white bg-green-500 border-0 py-2 px-2 focus:outline-none hover:bg-green-600 rounded text-sm">
+              <BsFillBagCheckFill className="m-1" />
+              Checkout
+            </button>
+          </Link>
           <button
             onClick={clearCart}
             className="flex mr-2 text-white bg-green-500 border-0 py-2 px-2 focus:outline-none hover:bg-green-600 rounded text-sm"
