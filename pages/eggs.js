@@ -38,7 +38,7 @@ const Eggs = () => {
                 </a>
                 <div className="mt-4">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    Eggs
+                    RIR fertile eggs
                   </h3>
                   <h2 className="text-gray-900 title-font text-lg font-medium">
                     Shooting Stars
@@ -59,7 +59,7 @@ const Eggs = () => {
                 </a>
                 <div className="mt-4">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    Eggs
+                    Australorp fertile eggs
                   </h3>
                   <h2 className="text-gray-900 title-font text-lg font-medium">
                     Neptune
@@ -80,10 +80,10 @@ const Eggs = () => {
                 </a>
                 <div className="mt-4">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    Eggs
+                    eggs
                   </h3>
                   <h2 className="text-gray-900 title-font text-lg font-medium">
-                    The 400 Blows
+                    Light sussex fertile eggs
                   </h2>
                   <p className="mt-1">Rs 18.40</p>
                   <p className="mt-1">Weight : 30g, 40g</p>
@@ -101,10 +101,10 @@ const Eggs = () => {
                 </a>
                 <div className="mt-4">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                    Eggs
+                    eggs
                   </h3>
                   <h2 className="text-gray-900 title-font text-lg font-medium">
-                    The Catalyzer
+                    Brahma fertile eggs
                   </h2>
                   <p className="mt-1">Rs 16.00</p>
                   <p className="mt-1">Weight : 30g, 40g</p>
