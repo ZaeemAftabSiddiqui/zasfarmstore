@@ -9,7 +9,7 @@ import {
 } from "react-icons/ai";
 import { BsFillBagCheckFill } from "react-icons/bs";
 
-const navbar = ({ cart, addToCart, removeFromCart, clearCart }) => {
+const navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
   // console.log( cart, addToCart, removeFromCart, clearCart);
   const toggelCart = () => {
     if (ref.current.classList.contains("translate-x-full")) {
@@ -72,13 +72,16 @@ const navbar = ({ cart, addToCart, removeFromCart, clearCart }) => {
       </div>
       <div
         onClick={toggelCart}
-        className=" cursor-pointer cart absolute top-8 right-6 mx-5"
+        className=" cursor-pointer cart absolute top-6 right-4 mx-5"
       >
         <AiOutlineShoppingCart className="text-2xl   md:text-4xl" />
       </div>
       <div
         ref={ref}
-        className="h-[100vh] w-72 sideCart absolute top-0 right-0 bg-green-100 px-8 py-10 transform transition-transform translate-x-full"
+        className={`h-[100vh] w-72 sideCart absolute top-0 right-0 bg-green-100 px-8 py-10 transform transition-transform
+         ${
+           Object.keys(cart).length !== 0 ? "translate-x-0" : "translate-x-full"
+         }`}
       >
         <h2 className="font-bold text-xl text-center">Shopping Cart</h2>
         <span
@@ -130,6 +133,7 @@ const navbar = ({ cart, addToCart, removeFromCart, clearCart }) => {
             );
           })}
         </ol>
+        <div className="font-bold my-2">Subtotal: Rs{subTotal}</div>
         <div className="flex">
           <Link href={"/checkout"}>
             <button className="flex mr-2 text-white bg-green-500 border-0 py-2 px-2 focus:outline-none hover:bg-green-600 rounded text-sm">
