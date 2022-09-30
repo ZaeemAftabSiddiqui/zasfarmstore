@@ -12,8 +12,8 @@ const footer = () => {
                 <Image
                   src="/logo.png"
                   alt="ZASFarmStore Farm fresh organic"
-                  width={200}
-                  height={200}
+                  width={150}
+                  height={150}
                 />
               </a>
             </Link>
