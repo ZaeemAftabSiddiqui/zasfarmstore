@@ -35,7 +35,7 @@ const Post = ({ addToCart }) => {
                 ZASFarmStore
               </h2>
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-                RIR fertile eggs
+                RIR fertile eggs (L, brown)
               </h1>
               <div className="flex mb-4">
                 <span className="flex items-center">
@@ -186,7 +186,14 @@ const Post = ({ addToCart }) => {
                 </button>
                 <button
                   onClick={() => {
-                    addToCart(slug, 1, 499, "Eggs", "L", "single comb");
+                    addToCart(
+                      slug,
+                      1,
+                      499,
+                      "Australorp fertile eggs",
+                      "L",
+                      "single comb"
+                    );
                   }}
                   className="flex ml-4 text-white bg-green-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-green-600 rounded"
                 >
