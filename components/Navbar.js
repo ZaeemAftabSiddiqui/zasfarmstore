@@ -8,6 +8,7 @@ import {
   AiFillMinusCircle,
 } from "react-icons/ai";
 import { BsFillBagCheckFill } from "react-icons/bs";
+import { MdAccountCircle } from "react-icons/md";
 
 const navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
   // console.log( cart, addToCart, removeFromCart, clearCart);
@@ -70,11 +71,14 @@ const navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
           </Link>
         </ul>
       </div>
-      <div
-        onClick={toggelCart}
-        className=" cursor-pointer cart absolute top-6 right-4 mx-5"
-      >
-        <AiOutlineShoppingCart className="text-2xl   md:text-4xl" />
+      <div className=" cursor-pointer cart absolute top-6 right-4 mx-5 flex">
+        <Link href={"/login"}>
+          <MdAccountCircle className="text-2xl   md:text-4xl mx-2" />
+        </Link>
+        <AiOutlineShoppingCart
+          onClick={toggelCart}
+          className="text-2xl   md:text-4xl"
+        />
       </div>
       <div
         ref={ref}
