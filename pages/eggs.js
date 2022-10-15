@@ -14,7 +14,7 @@ const Eggs = ({ products }) => {
                 <Link
                   passHref={true}
                   key={products[item]._id}
-                  href={`/products/${products[item].slug}`}
+                  href={`/product/${products[item].slug}`}
                 >
                   <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-4">
                     <a className="block relative h-48 rounded overflow-hidden">
@@ -55,11 +55,11 @@ const Eggs = ({ products }) => {
                         )}
                       </div>
                       <div className="mt-1">
+                        {products[item].color.includes("white") && (
+                          <button className="border-2 border-gray-300 ml-1 rounded-full w-6 h-6 focus:outline-none"></button>
+                        )}
                         {products[item].color.includes("brown") && (
                           <button className="border-2 border-gray-300 ml-1 bg-orange-500 rounded-full w-6 h-6 focus:outline-none"></button>
-                        )}
-                        {products[item].color.includes("white") && (
-                          <button className="border-2 border-gray-300 ml-1 bg-white rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
                         {products[item].color.includes("green") && (
                           <button className="border-2 border-gray-300 ml-1 bg-emerald-200 rounded-full w-6 h-6 focus:outline-none"></button>
@@ -68,7 +68,7 @@ const Eggs = ({ products }) => {
                           <button className="border-2 border-gray-300 ml-1 bg-orange-800 rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
 
-                        {products[item].color.includes("light brown") && (
+                        {products[item].color.includes("pink") && (
                           <button className="border-2 border-gray-300 ml-1 bg-orange-200 rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
                         {products[item].color.includes("blue") && (
