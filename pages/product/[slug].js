@@ -27,7 +27,6 @@ const Post = ({ addToCart, product, variants }) => {
   const [size, setSize] = useState(product.size);
 
   const refreshVariant = (newsize, newcolor) => {
-    console.log("v is", variants, newcolor, newsize);
     let url = `http://localhost:3000/product/${variants[newcolor][newsize]["slug"]}`;
     window.location = url;
   };
@@ -223,7 +222,7 @@ const Post = ({ addToCart, product, variants }) => {
                         onClick={() => {
                           refreshVariant(size, "blue");
                         }}
-                        className={`border-2  ml-1 bg-blue-100 rounded-full w-6 h-6 focus:outline-none${
+                        className={`border-2  ml-1 bg-blue-200 rounded-full w-6 h-6 focus:outline-none ${
                           color === "blue" ? "border-black" : "border-gray-300"
                         }`}
                       ></button>
