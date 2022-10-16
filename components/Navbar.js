@@ -83,7 +83,7 @@ const navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
       </div>
       <div
         ref={ref}
-        className={`h-[100vh] w-72 sideCart absolute top-0 right-0 bg-green-100 px-8 py-10 transform transition-transform
+        className={`h-[100vh] w-72 sideCart overflow-y-scroll absolute top-0 right-0 bg-green-100 px-8 py-10 transform transition-transform
          ${
            Object.keys(cart).length !== 0 ? "translate-x-0" : "translate-x-full"
          }`}
@@ -104,7 +104,7 @@ const navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
               <li key={k}>
                 <div className="item flex my-3">
                   <div className="w-2/3 font-semibold">
-                    {cart[k].name}({cart[k].size}/{cart[k].varient})
+                    {cart[k].name}({cart[k].size} / {cart[k].varient})
                   </div>
                   <div className="flex items-center justify-center font-semibold w-1/3 text-lg">
                     <AiFillMinusCircle
