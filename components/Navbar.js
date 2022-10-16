@@ -39,33 +39,33 @@ const navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         <ul className="flex items-center text-lg space-x-2 font-bold sm:text-xl sm:space-x-4 md:text-2xl md:space-x-6">
           <Link href={"/eggs"}>
             <a>
-              <li>Eggs</li>
+              <li className="hover:text-green-400">Eggs</li>
             </a>
           </Link>
           <Link href={"/fruits"}>
             <a>
-              <li>Fruits</li>
+              <li className="hover:text-green-400">Fruits</li>
             </a>
           </Link>
           <Link href={"/meat"}>
             <a>
-              <li>Meat</li>
+              <li className="hover:text-green-400">Meat</li>
             </a>
           </Link>
           <Link href={"/milk"}>
             <a>
-              <li>Milk</li>
+              <li className="hover:text-green-400">Milk</li>
             </a>
           </Link>
           <Link href={"/vegetable"}>
             <a>
-              <li>Vegetables</li>
+              <li className="hover:text-green-400">Vegetables</li>
             </a>
           </Link>
 
           <Link href={"/other"}>
             <a>
-              <li>Others</li>
+              <li className="hover:text-green-400">Others</li>
             </a>
           </Link>
         </ul>
@@ -103,7 +103,9 @@ const navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             return (
               <li key={k}>
                 <div className="item flex my-3">
-                  <div className="w-2/3 font-semibold">{cart[k].name}</div>
+                  <div className="w-2/3 font-semibold">
+                    {cart[k].name}({cart[k].size}/{cart[k].varient})
+                  </div>
                   <div className="flex items-center justify-center font-semibold w-1/3 text-lg">
                     <AiFillMinusCircle
                       onClick={() => {

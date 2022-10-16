@@ -39,17 +39,17 @@ const Post = ({ addToCart, product, variants }) => {
             <img
               alt="ecommerce"
               className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-              src="https://m.media-amazon.com/images/I/91E5KUZ3KzL._SL1500_.jpg"
+              src={product.img}
             />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
                 ZASFarmStore
               </h2>
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-                RIR fertile eggs
+                {product.title} ({product.size}/{product.color})
               </h1>
               <div className="flex mb-4">
-                <span className="flex items-center">
+                {/* <span className="flex items-center">
                   <svg
                     fill="currentColor"
                     stroke="currentColor"
@@ -144,18 +144,9 @@ const Post = ({ addToCart, product, variants }) => {
                       <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
                     </svg>
                   </a>
-                </span>
+                </span> */}
               </div>
-              <p className="leading-relaxed">
-                The Rhode Island Red is an American breed of domestic chicken.
-                It is the state bird of Rhode Island. It was developed there and
-                in Massachusetts in the late nineteenth century, by
-                cross-breeding birds of Oriental origin such as the Malay with
-                brown Leghorn birds from Italy. Primary use: Egg, Meat Egg
-                production (annual): 260 Egg size: Extra Large Temperament:
-                Hardy Recognized variety: Rose Comb, Single Comb Egg color:
-                Brown Adult male weight (lbs.): ≥ 8.5
-              </p>
+              <p className="leading-relaxed">{product.desc}</p>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 <div className="flex">
                   <span className="mr-3">Color</span>
@@ -276,20 +267,13 @@ const Post = ({ addToCart, product, variants }) => {
                 </button>
                 <button
                   onClick={() => {
-                    addToCart(
-                      slug,
-                      1,
-                      499,
-                      "Australorp fertile eggs",
-                      "L",
-                      "single comb"
-                    );
+                    addToCart(slug, 1, 499, product.title, size, color);
                   }}
                   className="flex ml-4 text-white bg-green-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-green-600 rounded"
                 >
                   Add to cart
                 </button>
-                <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                {/* <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                   <svg
                     fill="currentColor"
                     strokeLinecap="round"
@@ -300,7 +284,7 @@ const Post = ({ addToCart, product, variants }) => {
                   >
                     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                   </svg>
-                </button>
+                </button> */}
               </div>
               <div className="pin mt-6 flex space-x-2 text-sm">
                 <input

@@ -22,81 +22,84 @@ const footer = () => {
           <div className="flex-grow flex flex-wrap   md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CATEGORIES
+                SHOP
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    First Link
-                  </a>
+                  <Link href={"/eggs"}>
+                    <a className="text-gray-600 hover:text-gray-800">Eggs</a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
-                  </a>
+                  <Link href={"/fruits"}>
+                    <a className="text-gray-600 hover:text-gray-800">Fruits</a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
-                  </a>
+                  <Link href={"/meat"}>
+                    <a className="text-gray-600 hover:text-gray-800">Meat</a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
-                  </a>
+                  <Link href={"/milk"}>
+                    <a className="text-gray-600 hover:text-gray-800">Milk</a>
+                  </Link>
                 </li>
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CATEGORIES
+                SHOP
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    First Link
-                  </a>
+                  <Link href={"/vegetable"}>
+                    <a className="text-gray-600 hover:text-gray-800">
+                      Vegetables
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
-                  </a>
+                  <Link href={"/flowers"}>
+                    <a className="text-gray-600 hover:text-gray-800">Flowers</a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
-                  </a>
+                  <Link href={"/mushrooms"}>
+                    <a className="text-gray-600 hover:text-gray-800">
+                      Mushrooms
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
-                  </a>
+                  {" "}
+                  <Link href={"/other"}>
+                    <a className="text-gray-600 hover:text-gray-800">Others</a>
+                  </Link>
                 </li>
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CATEGORIES
+                ZASFarmStore
               </h2>
               <nav className="list-none mb-10">
                 <li>
+                  <a className="text-gray-600 hover:text-gray-800">About us</a>
+                </li>
+                <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    First Link
+                    Contact us
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
+                    Return Policy
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
+                    Terms And Conditions
                   </a>
                 </li>
               </nav>
@@ -133,7 +136,7 @@ const footer = () => {
         <div className="bg-gray-100">
           <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
             <p className="text-gray-500 text-sm text-center sm:text-left">
-              © 2022 ZASFarmStore —
+              © 2022 ZASFarmStore — All Rights Reserved.
               <a
                 href="https://twitter.com/ZaeemAftab"
                 rel="noopener noreferrer"
