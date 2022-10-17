@@ -294,11 +294,11 @@ const Post = ({ buyNow, addToCart, product, variants }) => {
               </div>
               <div className="flex">
                 <span className="title-font font-medium text-2xl text-gray-900">
-                  Rs. 58
+                  Rs.{product.price}
                 </span>
                 <button
                   onClick={() => {
-                    buyNow(slug, 1, 499, product.title, size, color);
+                    buyNow(slug, 1, product.price, product.title, size, color);
                   }}
                   className="flex ml-8 text-white bg-green-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-green-600 rounded"
                 >
@@ -306,7 +306,14 @@ const Post = ({ buyNow, addToCart, product, variants }) => {
                 </button>
                 <button
                   onClick={() => {
-                    addToCart(slug, 1, 499, product.title, size, color);
+                    addToCart(
+                      slug,
+                      1,
+                      product.price,
+                      product.title,
+                      size,
+                      color
+                    );
                   }}
                   className="flex ml-4 text-white bg-green-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-green-600 rounded"
                 >
@@ -362,7 +369,10 @@ export async function getServerSideProps(context) {
     await mongoose.connect(process.env.MONGO_URL);
   }
   let product = await Product.findOne({ slug: context.query.slug });
-  let variants = await Product.find({ title: product.title });
+  let variants = await Product.find({
+    title: product.title,
+    category: product.category,
+  });
   let colorSizeSlug = {}; // {brown: {XL : {slug: "zas-farm-store-XL"}}}
   for (let item of variants) {
     if (Object.keys(colorSizeSlug).includes(item.color)) {
