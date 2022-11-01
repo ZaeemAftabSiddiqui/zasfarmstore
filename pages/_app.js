@@ -28,7 +28,11 @@ function MyApp({ Component, pageProps }) {
       setKey(Math.random());
     }
   }, [router.query]);
-
+  const logout = () => {
+    localStorage.removeItem("token");
+    setUser({ value: null });
+    setKey(Math.random());
+  };
   const saveCart = (myCart) => {
     localStorage.setItem("cart", JSON.stringify(myCart));
     let subt = 0;
@@ -73,6 +77,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Navbar
+        logout={logout}
         user={user}
         key={key}
         cart={cart}

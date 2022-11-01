@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -11,6 +11,7 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import { MdAccountCircle } from "react-icons/md";
 
 const navbar = ({
+  logout,
   user,
   cart,
   addToCart,
@@ -18,6 +19,8 @@ const navbar = ({
   clearCart,
   subTotal,
 }) => {
+  const [dropdown, setDropdown] = useState(false);
+
   const toggelCart = () => {
     if (ref.current.classList.contains("translate-x-full")) {
       ref.current.classList.remove("translate-x-full");
@@ -78,9 +81,46 @@ const navbar = ({
         </ul>
       </div>
       <div className=" cursor-pointer cart absolute top-6 right-2 mx-3 flex">
-        {user.value && (
-          <MdAccountCircle className="text-2xl   md:text-4xl mx-2" />
-        )}
+        <a
+          onMouseOver={() => {
+            setDropdown(true);
+          }}
+          onMouseLeave={() => {
+            setDropdown(false);
+          }}
+        >
+          {dropdown && (
+            <div
+              onMouseOver={() => {
+                setDropdown(true);
+              }}
+              onMouseLeave={() => {
+                setDropdown(false);
+              }}
+              className="absolute top-8 bg-green-300 right-8 py-3 rounded-md w-32 text-center"
+            >
+              <ul>
+                <Link href={"/myaccount"}>
+                  <li className="py-1 hover:text-green-800 text-sm ">
+                    My Accounts
+                  </li>
+                </Link>
+                <Link href={"/orders"}>
+                  <li className="py-1 hover:text-green-800 text-sm ">orders</li>
+                </Link>
+                <li
+                  onClick={logout}
+                  className="py-1 hover:text-green-800 text-sm "
+                >
+                  Logout
+                </li>
+              </ul>
+            </div>
+          )}
+          {user.value && (
+            <MdAccountCircle className="text-2xl   md:text-4xl mx-2" />
+          )}
+        </a>
         {!user.value && (
           <Link href={"/login"}>
             <a>
@@ -95,6 +135,7 @@ const navbar = ({
           className="text-2xl   md:text-4xl"
         />
       </div>
+
       <div
         ref={ref}
         className={`h-[100vh] w-72 sideCart overflow-y-scroll absolute top-0 right-0 bg-green-100 px-8 py-10 transform transition-transform
