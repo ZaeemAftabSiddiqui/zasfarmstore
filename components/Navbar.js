@@ -97,20 +97,20 @@ const navbar = ({
               onMouseLeave={() => {
                 setDropdown(false);
               }}
-              className="absolute top-8 bg-green-300 right-8 py-3 rounded-md w-32 text-center"
+              className="absolute top-8 bg-white border right-8 py-3 rounded-md w-32 text-center font-bold shadow-lg"
             >
               <ul>
                 <Link href={"/myaccount"}>
-                  <li className="py-1 hover:text-green-800 text-sm ">
+                  <li className="py-1 hover:text-green-400 text-sm ">
                     My Accounts
                   </li>
                 </Link>
                 <Link href={"/orders"}>
-                  <li className="py-1 hover:text-green-800 text-sm ">orders</li>
+                  <li className="py-1 hover:text-green-400 text-sm ">orders</li>
                 </Link>
                 <li
                   onClick={logout}
-                  className="py-1 hover:text-green-800 text-sm "
+                  className="py-1 hover:text-green-400 text-sm "
                 >
                   Logout
                 </li>
