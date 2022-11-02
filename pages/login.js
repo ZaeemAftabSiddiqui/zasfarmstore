@@ -29,14 +29,13 @@ const Login = () => {
       body: JSON.stringify(data),
     });
     let response = await res.json();
-    console.log(response);
     setEmail("");
     setPassword("");
     if (response.success) {
       localStorage.setItem("token", response.token);
       toast.success("you are successfully loged in", {
         position: "top-left",
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -65,7 +64,7 @@ const Login = () => {
     <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <ToastContainer
         position="top-left"
-        autoClose={5000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
