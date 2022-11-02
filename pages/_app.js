@@ -5,15 +5,23 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LoadingBar from "react-top-loading-bar";
 
 function MyApp({ Component, pageProps }) {
   const [cart, setCart] = useState({});
   const [subTotal, setSubTotal] = useState(0);
   const [user, setUser] = useState({ value: null });
   const [key, setKey] = useState(0);
+  const [progress, setProgress] = useState(0);
   const router = useRouter();
 
   useEffect(() => {
+    router.events.on("routeChangeStart", () => {
+      setProgress(40);
+    });
+    router.events.on("routeChangeComplete", () => {
+      setProgress(100);
+    });
     console.log("hay I am useEffect");
     try {
       if (localStorage.getItem("cart")) {
@@ -88,6 +96,12 @@ function MyApp({ Component, pageProps }) {
   };
   return (
     <>
+      <LoadingBar
+        color="#4cd964"
+        progress={progress}
+        waitingTime={400}
+        onLoaderFinished={() => setProgress(0)}
+      />
       <ToastContainer
         position="top-left"
         autoClose={3000}
