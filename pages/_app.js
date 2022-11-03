@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   const [cart, setCart] = useState({});
   const [subTotal, setSubTotal] = useState(0);
   const [user, setUser] = useState({ value: null });
-  const [key, setKey] = useState(0);
+  const [key, setKey] = useState();
   const [progress, setProgress] = useState(0);
   const router = useRouter();
 
@@ -115,16 +115,18 @@ function MyApp({ Component, pageProps }) {
         pauseOnHover
         theme="light"
       />
-      <Navbar
-        logout={logout}
-        user={user}
-        key={key}
-        cart={cart}
-        addToCart={addToCart}
-        removeFromCart={removeFromCart}
-        clearCart={clearCart}
-        subTotal={subTotal}
-      />
+      {key && (
+        <Navbar
+          logout={logout}
+          user={user}
+          key={key}
+          cart={cart}
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+          clearCart={clearCart}
+          subTotal={subTotal}
+        />
+      )}
       <Component
         buyNow={buyNow}
         subTotal={subTotal}
