@@ -1,7 +1,8 @@
-ZAS Farm Store
+# ZAS Farm Store
 
 Welcome to our eCommerce store! We offer a wide selection of products and are dedicated to providing excellent customer service. We strive to make your shopping experience as easy and convenient as possible.
-Features
+
+# Features
 
     Secure checkout
     User-friendly interface
@@ -9,8 +10,19 @@ Features
     Ability to filter and sort products by various criteria   
     Fast and reliable shipping
     Easy returns and exchanges
+    
+# Technologies
 
-Product Categories
+This website is built using the following technologies:
+-	Next.js - framework for building server-rendered React applications
+-	Tailwind CSS - utility-first CSS framework for building fast-loading and highly-readable web designs
+-	MongoDB - open-source document-oriented database management system
+-	JavaScript - used for adding interactivity and dynamic functionality to web pages
+-	React - JavaScript library for building user interfaces
+-	Node.js - JavaScript runtime for server-side development
+-	Express - web application framework for Node.js
+
+# Product Categories
 
 Our store offers a wide range of products including:
 
@@ -20,7 +32,7 @@ Our store offers a wide range of products including:
     vegetables
     Beauty and Personal Care
 
-Contact Us
+# Contact Us
 
 If you have any questions or concerns, please feel free to contact us at [email zaeemaftabsiddiqui@gmail.com]. Our customer service team is available 24/7 to assist you.
 Newsletters
