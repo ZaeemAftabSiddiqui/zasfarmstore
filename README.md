@@ -21,6 +21,7 @@ This website is built using the following technologies:
 -	React - JavaScript library for building user interfaces
 -	Node.js - JavaScript runtime for server-side development
 -	Express - web application framework for Node.js
+- react-toastify - React notification library
 
 # Product Categories
 
