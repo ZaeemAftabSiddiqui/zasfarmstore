@@ -31,6 +31,7 @@ Our store offers a wide range of products including:
     Milk
     Meat
     vegetables
+    Fruits
     Beauty and Personal Care
 
 # Contact Us
